@@ -14,9 +14,14 @@ BOT_NAME = 'automobile'
 SPIDER_MODULES = ['automobile.spiders']
 NEWSPIDER_MODULE = 'automobile.spiders'
 
+FEED_URI = '../data_automobile/%(name)s%(time)s.csv'
+FEED_FORMAT = 'csv'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'automobile (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0'
+
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -27,7 +32,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -52,9 +57,10 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'automobile.middlewares.AutomobileDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'automobile.middlewares.AutomobileDownloaderMiddleware': 543,
+	#'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware',
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
