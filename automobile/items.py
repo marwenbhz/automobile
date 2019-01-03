@@ -10,5 +10,8 @@ import scrapy
 
 class AutomobileItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    TITLE = scrapy.Field()
+    LINK = scrapy.Field()
+    PRICE = scrapy.Field()
+    PICTURE = scrapy.Field()
+    RAITING = scrapy.Field()
