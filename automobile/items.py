@@ -15,3 +15,7 @@ class AutomobileItem(scrapy.Item):
     PRICE = scrapy.Field()
     PICTURE = scrapy.Field()
     RAITING = scrapy.Field()
+    PHONE = scrapy.Field()
+    POSTAL_CODE = scrapy.Field()
+    VILLE = scrapy.Field()
+    ADRESS = scrapy.Field()

@@ -4,4 +4,4 @@ from automobile.spiders.automobile_spider import AutomobileSpiderSpider
 
 process = CrawlerProcess(get_project_settings())
 process.crawl(AutomobileSpiderSpider)
-process.start()  
+process.start()
